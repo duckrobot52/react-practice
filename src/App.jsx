@@ -25,7 +25,7 @@ function App() {
   // +3개 상품 더 보기 : json을 axios로 가져오기 (1회 → veggie2, 2회 → veggie3, 3회 → 알림)
   const loadMore = () => {
     if (count >= 3) return alert('더이상 상품이 없습니다.')
-    axios.get(`/react-data/veggie${count + 1}.json`).then((result) => {
+    axios.get(`${import.meta.env.BASE_URL}react-data/veggie${count + 1}.json`).then((result) => {
       setVeggie([...veggie, ...result.data])
       setCount(count + 1)
     })

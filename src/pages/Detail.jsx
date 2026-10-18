@@ -28,7 +28,7 @@ function Detail() {
     <div className={'container start ' + fade2}>
       <div className="row" style={{ marginBottom: '50px' }}>
         <div className="col-md-6">
-          <img src={'/' + imgUrl} width="100%" alt={title} />
+          <img src={import.meta.env.BASE_URL + imgUrl} width="100%" alt={title} />
         </div>
         <div className="col-md-6">
           <h4 className="pt-5">{title}</h4>

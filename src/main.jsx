@@ -15,6 +15,7 @@ import About from './pages/About.jsx'
 import Member from './pages/Member.jsx'
 import Location from './pages/Location.jsx'
 
+// vite.config.js의 base('/react-practice/')를 라우터 basename으로 사용
 const router = createBrowserRouter([
   {
     path: '/',
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
       { path: '*', element: <Notfound /> }, // 나머지 모든 경로
     ],
   },
-])
+], { basename: import.meta.env.BASE_URL.replace(/\/$/, '') })
 
 createRoot(document.getElementById('root')).render(
   <Provider store={store}>

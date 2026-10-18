@@ -30,7 +30,7 @@ function Cart() {
                   <td style={mid}>{id}</td>
                   <td>
                     <Link to={`/detail/${id}`}>
-                      <img src={`/img/${imgurl}`} style={imgStyle} alt={name} />
+                      <img src={`${import.meta.env.BASE_URL}img/${imgurl}`} style={imgStyle} alt={name} />
                     </Link>
                   </td>
                   <td style={mid}>{name}</td>
